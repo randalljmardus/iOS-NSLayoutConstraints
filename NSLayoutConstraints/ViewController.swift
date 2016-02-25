@@ -19,15 +19,12 @@ class ViewController: UIViewController {
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
         
-        let constraints: [NSLayoutConstraint] = [
-            subview.topAnchor.constraintEqualToAnchor(view.topAnchor),
-            subview.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
-            subview.widthAnchor.constraintEqualToAnchor(view.widthAnchor),
-            subview.heightAnchor.constraintEqualToAnchor(view.heightAnchor)
-        ]
- 
-        NSLayoutConstraint.activateConstraints(constraints)
-        NSLayoutConstraint.deactivateConstraints(constraints)
+     subview.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
+     subview.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor).active = true
+     subview.heightAnchor.constraintEqualToConstant(200).active = true
+     
+        let widthConstraint = subview.widthAnchor.constraintEqualToConstant(300)
+        print("Default priority:", widthConstraint.priority)
         
         
     }
