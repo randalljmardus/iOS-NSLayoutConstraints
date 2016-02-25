@@ -25,7 +25,9 @@ class ViewController: UIViewController {
             subview.widthAnchor.constraintEqualToAnchor(view.widthAnchor),
             subview.heightAnchor.constraintEqualToAnchor(view.heightAnchor)
         ]
-        
+ 
+        NSLayoutConstraint.activateConstraints(constraints)
+        NSLayoutConstraint.deactivateConstraints(constraints)
         
         
     }
