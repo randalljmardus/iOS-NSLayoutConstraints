@@ -21,6 +21,13 @@ class ViewController: UIViewController {
         
      NSLayoutConstraint(item: subview, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0).active = true
         
+        NSLayoutConstraint(item: subview, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0).active = true
+        
+        NSLayoutConstraint(item: subview, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: 0).active = true
+        
+        NSLayoutConstraint(item: subview, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1.0, constant: 0).active = true
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
