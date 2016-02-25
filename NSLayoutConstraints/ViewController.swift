@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         
         print("Width current priority:", widthConstraint.priority)
         
+        subview.widthAnchor.constraintLessThanOrEqualToAnchor(view.widthAnchor, multiplier: 0.5).active = true
         
         
         
