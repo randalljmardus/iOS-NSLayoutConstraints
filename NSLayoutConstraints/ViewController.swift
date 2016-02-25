@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+    let subView = UIView()
+        subView.backgroundColor = UIColor.redColor()
+        subView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(subView)
+        
+        let constraint = subView.topAnchor.constraintEqualToAnchor(view.topAnchor)
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
