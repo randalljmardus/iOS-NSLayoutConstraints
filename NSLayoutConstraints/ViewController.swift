@@ -20,8 +20,9 @@ class ViewController: UIViewController {
         view.addSubview(subView)
         
         let constraint = subView.topAnchor.constraintEqualToAnchor(view.topAnchor)
-    
-    
+        constraint.active = true
+        
+        print("constraint.active is:", constraint.active)
     }
 
     override func didReceiveMemoryWarning() {
