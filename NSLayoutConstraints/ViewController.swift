@@ -14,15 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-    let subView = UIView()
-        subView.backgroundColor = UIColor.redColor()
-        subView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(subView)
+    let subview = UIView()
+        subview.backgroundColor = UIColor.redColor()
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(subview)
         
-        let constraint = subView.topAnchor.constraintEqualToAnchor(view.topAnchor)
-        constraint.active = true
+     NSLayoutConstraint(item: subview, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0).active = true
         
-        print("constraint.active is:", constraint.active)
     }
 
     override func didReceiveMemoryWarning() {
