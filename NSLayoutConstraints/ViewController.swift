@@ -24,18 +24,10 @@ class ViewController: UIViewController {
      subview.heightAnchor.constraintEqualToConstant(200).active = true
      
         let widthConstraint = subview.widthAnchor.constraintEqualToConstant(300)
-        print("Default priority:", widthConstraint.priority)
         
-        widthConstraint.priority = 999
         widthConstraint.active = true
         
-        widthConstraint.priority = 700
-        
-        print("Width current priority:", widthConstraint.priority)
-        
-        subview.widthAnchor.constraintLessThanOrEqualToAnchor(view.widthAnchor, multiplier: 0.5).active = true
-        
-        
+        widthConstraint.constant = 100
         
     }
 
