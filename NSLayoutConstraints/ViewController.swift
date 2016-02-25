@@ -19,16 +19,14 @@ class ViewController: UIViewController {
         subview.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subview)
         
-//     NSLayoutConstraint(item: subview, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0).active = true
-//        
-//        NSLayoutConstraint(item: subview, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0).active = true
-//        
-//        NSLayoutConstraint(item: subview, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: 0).active = true
-//        
-//        NSLayoutConstraint(item: subview, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1.0, constant: 0).active = true
+        let constraints: [NSLayoutConstraint] = [
+            subview.topAnchor.constraintEqualToAnchor(view.topAnchor),
+            subview.leadingAnchor.constraintEqualToAnchor(view.leadingAnchor),
+            subview.widthAnchor.constraintEqualToAnchor(view.widthAnchor),
+            subview.heightAnchor.constraintEqualToAnchor(view.heightAnchor)
+        ]
         
-        subview.topAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-        NSLayoutConstraint(item: subview, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0).active = true
+        
         
     }
 
